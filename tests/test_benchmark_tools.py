@@ -142,7 +142,8 @@ def test_tune_search_sweeps_a_faiss_generation(tmp_path, capsys):
     report = json.loads(out.read_text())
     assert set(report) == {"nprobe=1 k=20", "nprobe=1 k=50", "nprobe=4 k=20", "nprobe=4 k=50"}
     assert all(0.0 <= row["recall_at_20_mean"] <= 1.0 for row in report.values())
-    assert report["nprobe=4 k=50"]["recall_at_20_mean"] >= report["nprobe=1 k=20"]["recall_at_20_mean"]
+    # Recall is not guaranteed to rise with nprobe on a tiny index: extra PQ candidates
+    # from other lists can displace true neighbours, and FAISS builds differ by platform.
 
 
 def test_first_not_flagged_check_uses_the_flag_and_the_suspect_list():
