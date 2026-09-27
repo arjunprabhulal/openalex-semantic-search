@@ -9,6 +9,7 @@
 
 <div align="center">
 
+[![CI](https://github.com/arjunprabhulal/openalex-semantic-search/actions/workflows/ci.yml/badge.svg)](https://github.com/arjunprabhulal/openalex-semantic-search/actions/workflows/ci.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-green.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](pyproject.toml)
 [![Data: OpenAlex CC0](https://img.shields.io/badge/data-OpenAlex%20CC0-orange.svg)](https://openalex.org)
