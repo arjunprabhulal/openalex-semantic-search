@@ -17,6 +17,11 @@
 
 </div>
 
+<p align="center">
+  <img src="assets/search-demo.gif" alt="Typing a query in Rivul AI's Search papers returns ranked papers from the full 300M+ index as you type" width="720" /><br>
+  <sub>Live search over the full 300M+ index: Search papers in Rivul AI, powered by this engine.</sub>
+</p>
+
 Search by meaning, not just keywords. *"shrinking neural networks so they run on phones"*
 returns ShuffleNet and papers on compressing CNNs for mobile devices, though none of them
 say "shrinking" or "phones". Paste an exact title and you get that paper. It powers the

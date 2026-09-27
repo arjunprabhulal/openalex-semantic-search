@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import re
 import sqlite3
+import threading
 from typing import Sequence
 
 from .records import Paper
@@ -41,22 +42,50 @@ def normalize_title(value: str) -> str:
 
 
 class MetadataStore:
+    """SQLite metadata for small generations.
+
+    A sqlite3 connection must not run statements from two threads at once, and
+    the API serves searches from a thread pool, so each thread gets its own
+    connection to the same file.
+    """
+
     def __init__(self, path: Path, *, read_only: bool = False):
         self.path = path
-        if read_only:
-            uri = f"file:{path}?mode=ro"
-            self.connection = sqlite3.connect(uri, uri=True, check_same_thread=False)
+        self.read_only = read_only
+        self._local = threading.local()
+        self._connections: list[sqlite3.Connection] = []
+        self._connections_lock = threading.Lock()
+        self.connection  # open this thread's connection now so errors surface early
+
+    def _connect(self) -> sqlite3.Connection:
+        if self.read_only:
+            connection = sqlite3.connect(f"file:{self.path}?mode=ro", uri=True, check_same_thread=False)
         else:
-            self.connection = sqlite3.connect(path, check_same_thread=False)
-        self.connection.row_factory = sqlite3.Row
-        self.connection.execute("PRAGMA foreign_keys=ON")
-        self.connection.execute("PRAGMA temp_store=MEMORY")
-        if not read_only:
-            self.connection.execute("PRAGMA journal_mode=WAL")
-            self.connection.execute("PRAGMA synchronous=NORMAL")
+            connection = sqlite3.connect(self.path, check_same_thread=False)
+        connection.row_factory = sqlite3.Row
+        connection.execute("PRAGMA foreign_keys=ON")
+        connection.execute("PRAGMA temp_store=MEMORY")
+        if not self.read_only:
+            connection.execute("PRAGMA journal_mode=WAL")
+            connection.execute("PRAGMA synchronous=NORMAL")
+        return connection
+
+    @property
+    def connection(self) -> sqlite3.Connection:
+        connection = getattr(self._local, "connection", None)
+        if connection is None:
+            connection = self._connect()
+            self._local.connection = connection
+            with self._connections_lock:
+                self._connections.append(connection)
+        return connection
 
     def close(self) -> None:
-        self.connection.close()
+        with self._connections_lock:
+            connections, self._connections = self._connections, []
+        for connection in connections:
+            connection.close()
+        self._local = threading.local()
 
     def create_schema(self) -> None:
         self.connection.executescript(
