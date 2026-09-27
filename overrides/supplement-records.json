@@ -1,0 +1,29 @@
+{
+  "format_version": 1,
+  "description": "Hand-verified records for landmark works missing from the serving generation, merged at query time (openalex_semantic_search/supplement.py). At most 500 records. Every record must list the https sources its metadata was checked against and the date it was checked; copy fields only from those sources, never from memory. A work the generation already holds is skipped at startup, so remove an entry once a rebuilt generation contains it.",
+  "records": [
+    {
+      "openalex_id": "W2963341956",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "authors": ["Jacob Devlin", "Ming-Wei Chang", "Kenton Lee", "Kristina Toutanova"],
+      "publication_year": 2019,
+      "publication_date": "",
+      "doi": "https://doi.org/10.18653/v1/n19-1423",
+      "venue": "Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
+      "work_type": "conference-paper",
+      "topic": "Topic Modeling",
+      "field": "Computer Science",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.18653/v1/n19-1423",
+      "landing_url": "https://doi.org/10.18653/v1/n19-1423",
+      "cited_by_count": 33924,
+      "snippet": "",
+      "sources": [
+        "https://api.openalex.org/works/W2963341956",
+        "https://api.crossref.org/works/10.18653/v1/N19-1423"
+      ],
+      "verified_at": "2026-09-24",
+      "note": "Absent from the full generation (work id lookup 404). Title, authors, year, DOI, venue and pages 4171-4186 agree between OpenAlex and Crossref; author spelling and venue follow Crossref. publication_date is left empty because Crossref gives only the year and OpenAlex's 2019-01-01 is a placeholder. cited_by_count and topic are OpenAlex's on 2026-09-24. The OpenAlex abstract field holds a citation line, not an abstract, so snippet is empty. The arXiv version (1810.04805) sits on W2896457183, whose title and DOI were overwritten upstream by a LIPIcs paper."
+    }
+  ]
+}

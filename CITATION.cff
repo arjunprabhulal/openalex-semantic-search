@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "openalex-semantic-search: semantic search over 300M+ OpenAlex works: GPU-embedded, served from one CPU server"
+abstract: >-
+  Dense retrieval over 300 million plus OpenAlex scholarly records without a vector
+  database. A one-off GPU batch job embeds the corpus with BGE-small; a single CPU
+  server builds a FAISS IVF-PQ index, re-scores candidates with INT8 vectors, merges
+  exact and prefix title matches, and serves queries through an HTTP API.
+authors:
+  - family-names: Prabhulal
+    given-names: Arjun
+type: software
+license: Apache-2.0
+repository-code: "https://github.com/arjunprabhulal/openalex-semantic-search"
+url: "https://arjunprabhulal.com/how-i-built-semantic-search-300m-academic-papers/"
+keywords:
+  - semantic search
+  - dense retrieval
+  - OpenAlex
+  - FAISS
+  - product quantization
+  - INT8 quantization
+  - scholarly search
+version: 0.1.0
+date-released: "2026-09-27"

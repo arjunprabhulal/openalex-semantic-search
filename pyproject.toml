@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openalex-semantic-search"
+version = "0.1.0"
+description = "Semantic search over 300M+ OpenAlex works without a vector database: embedded once on a GPU, indexed and served on one CPU server with FAISS IVF-PQ and INT8 re-scoring."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "Arjun Prabhulal" }]
+keywords = ["openalex", "semantic-search", "faiss", "ivf-pq", "dense-retrieval", "embeddings", "scholarly-search", "rag", "int8-quantization"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: MacOS",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+  "Topic :: Text Processing :: Indexing",
+]
+dependencies = [
+  "numpy>=1.26,<3",
+]
+
+[project.optional-dependencies]
+runtime = [
+  "boto3>=1.34,<2",
+  "faiss-cpu>=1.9,<2",
+  "fastapi>=0.115,<1",
+  "sentence-transformers>=3.4,<4",
+  "uvicorn[standard]>=0.30,<1",
+]
+test = [
+  "httpx>=0.27,<1",
+  "pytest>=8,<9",
+]
+
+[project.urls]
+Homepage = "https://github.com/arjunprabhulal/openalex-semantic-search"
+Documentation = "https://github.com/arjunprabhulal/openalex-semantic-search#readme"
+Issues = "https://github.com/arjunprabhulal/openalex-semantic-search/issues"
+"Design write-up" = "https://arjunprabhulal.com/how-i-built-semantic-search-300m-academic-papers/"
+
+[project.scripts]
+openalex-semantic-search = "openalex_semantic_search.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["openalex_semantic_search*"]
+
+[tool.setuptools.package-data]
+openalex_semantic_search = ["benchmark-seed-works.json", "static/*"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["."]

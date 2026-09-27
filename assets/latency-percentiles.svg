@@ -1,0 +1,58 @@
+<svg class="c" xmlns="http://www.w3.org/2000/svg" viewBox="-8 -8 736 336" width="720" height="320" role="img" aria-labelledby="t d">
+<title id="t">Server-side search latency percentiles</title>
+<desc id="d">First-seen queries (40 distinct queries, one run each): p50 240.0 ms, p90 265.5 ms, p95 273.6 ms, p99 276.8 ms. The same 8 queries repeated 20 times each (160 runs): p50 40.8 ms, p90 59.7 ms, p95 60.3 ms, p99 61.7 ms.</desc>
+<style>
+.c{--ink:#1f2328;--muted:#5b616b;--faint:#8a8f98;--grid:#e4e6ea;--accent:#0066cc;--mark:#8a8f98;--mark2:#c3c7cd}
+
+.c text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;fill:var(--ink);font-size:13px}
+.c .m{fill:var(--muted)} .c .s{font-size:12px} .c .t{font-size:15px;font-weight:600} .c .b{font-weight:600}
+.c .n{font-variant-numeric:tabular-nums}
+.c .ax{stroke:var(--faint);stroke-width:1} .c .g{stroke:var(--grid);stroke-width:1}
+.c .acc{fill:var(--accent)} .c .accs{stroke:var(--accent)} .c .mk{fill:var(--mark)} .c .mks{stroke:var(--mark)} .c .mk2{fill:var(--mark2)}
+.c text.acct{fill:var(--accent)}
+</style>
+<rect x="-8" y="-8" width="736" height="336" fill="#ffffff"/>
+<text x="0" y="22" class="t">Server-side search time, 300 million plus papers</text>
+<text x="0" y="42" class="m s">Percentiles of elapsed_ms reported by the index, top 20 results per query</text>
+<line x1="70" y1="90" x2="70" y2="256" class="g"/>
+<text x="70" y="276" class="m s n" text-anchor="middle">0</text>
+<line x1="170" y1="90" x2="170" y2="256" class="g"/>
+<text x="170" y="276" class="m s n" text-anchor="middle">50</text>
+<line x1="270" y1="90" x2="270" y2="256" class="g"/>
+<text x="270" y="276" class="m s n" text-anchor="middle">100</text>
+<line x1="370" y1="90" x2="370" y2="256" class="g"/>
+<text x="370" y="276" class="m s n" text-anchor="middle">150</text>
+<line x1="470" y1="90" x2="470" y2="256" class="g"/>
+<text x="470" y="276" class="m s n" text-anchor="middle">200</text>
+<line x1="570" y1="90" x2="570" y2="256" class="g"/>
+<text x="570" y="276" class="m s n" text-anchor="middle">250</text>
+<line x1="670" y1="90" x2="670" y2="256" class="g"/>
+<text x="670" y="276" class="m s n" text-anchor="middle">300 ms</text>
+<text x="0" y="108" class="b n">p50</text>
+<line x1="151.6" y1="104" x2="550" y2="104" class="mks" stroke-width="2"/>
+<circle cx="151.6" cy="104" r="5" class="mk"/>
+<circle cx="550" cy="104" r="5" class="acc"/>
+<text x="141.6" y="108" class="m s n" text-anchor="end">41</text>
+<text x="560" y="108" class="s n">240</text>
+<text x="0" y="154" class="b n">p90</text>
+<line x1="189.4" y1="150" x2="601" y2="150" class="mks" stroke-width="2"/>
+<circle cx="189.4" cy="150" r="5" class="mk"/>
+<circle cx="601" cy="150" r="5" class="acc"/>
+<text x="179.4" y="154" class="m s n" text-anchor="end">60</text>
+<text x="611" y="154" class="s n">266</text>
+<text x="0" y="200" class="b n">p95</text>
+<line x1="190.6" y1="196" x2="617.2" y2="196" class="mks" stroke-width="2"/>
+<circle cx="190.6" cy="196" r="5" class="mk"/>
+<circle cx="617.2" cy="196" r="5" class="acc"/>
+<text x="180.6" y="200" class="m s n" text-anchor="end">60</text>
+<text x="627.2" y="200" class="s n">274</text>
+<text x="0" y="246" class="b n">p99</text>
+<line x1="193.4" y1="242" x2="623.6" y2="242" class="mks" stroke-width="2"/>
+<circle cx="193.4" cy="242" r="5" class="mk"/>
+<circle cx="623.6" cy="242" r="5" class="acc"/>
+<text x="183.4" y="246" class="m s n" text-anchor="end">62</text>
+<text x="633.6" y="246" class="s n">277</text>
+<text x="151.6" y="78" class="m s" text-anchor="middle">same query again (n=160)</text>
+<text x="550" y="78" class="acct s" text-anchor="middle">first time a query is seen (n=40)</text>
+<text x="0" y="312" class="m s">Measured 2026-09-25 against the live index. Network time excluded.</text>
+</svg>

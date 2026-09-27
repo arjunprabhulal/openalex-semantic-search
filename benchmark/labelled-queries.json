@@ -1,0 +1,844 @@
+{
+  "description": "Labelled queries used in the 2026-09-24 relevance audit of the full generation. Ground truth is OpenAlex work ids (or title/author substrings where several works qualify).",
+  "queries": [
+    {
+      "id": "E01",
+      "type": "exact",
+      "request": {
+        "query": "Attention Is All You Need",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2626778328"
+        ]
+      }
+    },
+    {
+      "id": "E02",
+      "type": "exact",
+      "request": {
+        "query": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2963341956"
+        ]
+      },
+      "note": "W2963341956 is not in the full generation; served from overrides/supplement-records.json since the landmark-corrections change. Misses if the supplement is not loaded (check /healthz supplement_records)."
+    },
+    {
+      "id": "E03",
+      "type": "exact",
+      "request": {
+        "query": "Deep Residual Learning for Image Recognition",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2194775991",
+          "W2949650786"
+        ]
+      }
+    },
+    {
+      "id": "E04",
+      "type": "exact",
+      "request": {
+        "query": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W3098425262"
+        ]
+      }
+    },
+    {
+      "id": "E05",
+      "type": "exact",
+      "request": {
+        "query": "Highly accurate protein structure prediction with AlphaFold",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W3177828909"
+        ]
+      }
+    },
+    {
+      "id": "E06",
+      "type": "exact",
+      "request": {
+        "query": "Molecular Structure of Nucleic Acids: A Structure for Deoxyribose Nucleic Acid",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2126466006"
+        ]
+      }
+    },
+    {
+      "id": "E07",
+      "type": "exact",
+      "request": {
+        "query": "Deep learning",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2919115771"
+        ]
+      }
+    },
+    {
+      "id": "E08",
+      "type": "exact",
+      "request": {
+        "query": "A Programmable Dual-RNA–Guided DNA Endonuclease in Adaptive Bacterial Immunity",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2045435533"
+        ]
+      }
+    },
+    {
+      "id": "E09",
+      "type": "exact",
+      "request": {
+        "query": "Observation of Gravitational Waves from a Binary Black Hole Merger",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2252795400"
+        ]
+      }
+    },
+    {
+      "id": "E10",
+      "type": "exact",
+      "request": {
+        "query": "Protein measurement with the Folin phenol reagent",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W1775749144"
+        ]
+      }
+    },
+    {
+      "id": "E11",
+      "type": "exact",
+      "request": {
+        "query": "Global cancer statistics 2020: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W3128646645"
+        ]
+      }
+    },
+    {
+      "id": "E12",
+      "type": "exact",
+      "request": {
+        "query": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "title_contains": [
+          "the prisma 2020 statement"
+        ],
+        "author_contains": [
+          "Page"
+        ]
+      }
+    },
+    {
+      "id": "E13",
+      "type": "exact",
+      "request": {
+        "query": "Observation of a new boson at a mass of 125 GeV with the CMS experiment at the LHC",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2167727518"
+        ]
+      }
+    },
+    {
+      "id": "E14",
+      "type": "exact",
+      "request": {
+        "query": "Clinical features of patients infected with 2019 novel coronavirus in Wuhan, China",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W3001118548"
+        ]
+      }
+    },
+    {
+      "id": "E15",
+      "type": "exact",
+      "request": {
+        "query": "Initial sequencing and analysis of the human genome",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2168909179"
+        ]
+      }
+    },
+    {
+      "id": "E16",
+      "type": "exact",
+      "request": {
+        "query": "Generalized Gradient Approximation Made Simple",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W1981368803"
+        ]
+      }
+    },
+    {
+      "id": "E17",
+      "type": "exact",
+      "request": {
+        "query": "Mastering the game of Go with deep neural networks and tree search",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2257979135"
+        ]
+      }
+    },
+    {
+      "id": "E18",
+      "type": "exact",
+      "request": {
+        "query": "ImageNet classification with deep convolutional neural networks",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2163605009",
+          "W3147600416"
+        ]
+      }
+    },
+    {
+      "id": "H01",
+      "type": "exact-variant",
+      "request": {
+        "query": "Retrieval Augmented Generation for Knowledge Intensive NLP Tasks",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W3098425262"
+        ]
+      },
+      "note": "Hyphens omitted. Was rank 17 on an earlier build."
+    },
+    {
+      "id": "H02",
+      "type": "exact-variant",
+      "request": {
+        "query": "retrieval augmented generation for knowledge intensive nlp tasks",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W3098425262"
+        ]
+      }
+    },
+    {
+      "id": "H03",
+      "type": "exact-variant",
+      "request": {
+        "query": "Retrieval‐Augmented Generation for Knowledge‐Intensive NLP Tasks",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W3098425262"
+        ]
+      },
+      "note": "U+2010 hyphens typed."
+    },
+    {
+      "id": "H04",
+      "type": "exact-variant",
+      "request": {
+        "query": "A Programmable Dual RNA Guided DNA Endonuclease in Adaptive Bacterial Immunity",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2045435533"
+        ]
+      }
+    },
+    {
+      "id": "H05",
+      "type": "exact-variant",
+      "request": {
+        "query": "Deep Residual Learning for Image Recognition.",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2194775991",
+          "W2949650786"
+        ]
+      }
+    },
+    {
+      "id": "P01",
+      "type": "paraphrase",
+      "request": {
+        "query": "retrieval augmented generation for knowledge intensive NLP",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W3098425262"
+        ]
+      }
+    },
+    {
+      "id": "P02",
+      "type": "paraphrase",
+      "request": {
+        "query": "deep residual networks for image recognition",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2194775991",
+          "W2949650786"
+        ]
+      }
+    },
+    {
+      "id": "P03",
+      "type": "paraphrase",
+      "request": {
+        "query": "transformer network architecture based solely on attention mechanisms",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2626778328"
+        ]
+      }
+    },
+    {
+      "id": "P04",
+      "type": "paraphrase",
+      "request": {
+        "query": "AlphaFold protein structure prediction",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W3177828909"
+        ]
+      }
+    },
+    {
+      "id": "P05",
+      "type": "paraphrase",
+      "request": {
+        "query": "BERT bidirectional transformer pre-training for language understanding",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2963341956"
+        ]
+      },
+      "note": "Same data gap as E02."
+    },
+    {
+      "id": "P06",
+      "type": "paraphrase",
+      "request": {
+        "query": "double helix structure of DNA",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2126466006"
+        ]
+      }
+    },
+    {
+      "id": "P07",
+      "type": "paraphrase",
+      "request": {
+        "query": "deep learning review LeCun Bengio Hinton",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2919115771"
+        ]
+      }
+    },
+    {
+      "id": "T01",
+      "type": "topic",
+      "request": {
+        "query": "CRISPR Cas9 genome editing",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "title_contains": [
+          "a programmable dual-rna",
+          "multiplex genome engineering using crispr",
+          "rna-guided human genome engineering",
+          "genome engineering using the crispr-cas9 system",
+          "the new frontier of genome engineering"
+        ]
+      }
+    },
+    {
+      "id": "T02",
+      "type": "topic",
+      "request": {
+        "query": "generative adversarial networks",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "title_contains": [
+          "generative adversarial"
+        ],
+        "author_contains": [
+          "Goodfellow"
+        ]
+      }
+    },
+    {
+      "id": "T03",
+      "type": "topic",
+      "request": {
+        "query": "dropout to prevent overfitting in neural networks",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2095705004"
+        ]
+      }
+    },
+    {
+      "id": "A01",
+      "type": "author",
+      "request": {
+        "query": "Yoshua Bengio",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "author_contains": [
+          "Yoshua Bengio"
+        ]
+      },
+      "note": "No author index; out of scope for query-time fixes."
+    },
+    {
+      "id": "A02",
+      "type": "author",
+      "request": {
+        "query": "Jennifer Doudna",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "author_contains": [
+          "Doudna"
+        ]
+      },
+      "note": "No author index; out of scope for query-time fixes."
+    },
+    {
+      "id": "B18",
+      "type": "author+topic",
+      "request": {
+        "query": "Kaiming He residual learning",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2194775991",
+          "W2949650786"
+        ]
+      }
+    },
+    {
+      "id": "D01",
+      "type": "doi",
+      "request": {
+        "query": "10.1038/nature14539",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2919115771"
+        ]
+      },
+      "note": "No DOI index; the app resolves DOIs itself."
+    },
+    {
+      "id": "D02",
+      "type": "doi",
+      "request": {
+        "query": "https://doi.org/10.1109/CVPR.2016.90",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2194775991"
+        ]
+      },
+      "note": "No DOI index; the app resolves DOIs itself."
+    },
+    {
+      "id": "Y01",
+      "type": "typo",
+      "request": {
+        "query": "atention is all you need",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2626778328"
+        ]
+      },
+      "note": "Typo tolerance needs an index; out of scope."
+    },
+    {
+      "id": "Y02",
+      "type": "typo",
+      "request": {
+        "query": "Deep Residul Lerning for Image Recognition",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2194775991",
+          "W2949650786"
+        ]
+      }
+    },
+    {
+      "id": "Y03",
+      "type": "typo",
+      "request": {
+        "query": "alphafold protien structure predicton",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W3177828909"
+        ]
+      }
+    },
+    {
+      "id": "Y04",
+      "type": "typo",
+      "request": {
+        "query": "Generalized Gradient Aproximation Made Simple",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W1981368803"
+        ]
+      },
+      "note": "Typo tolerance needs an index; out of scope."
+    },
+    {
+      "id": "N01",
+      "type": "non-English exact",
+      "request": {
+        "query": "Zur Elektrodynamik bewegter Körper",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2048251016"
+        ]
+      }
+    },
+    {
+      "id": "N03",
+      "type": "non-English exact",
+      "request": {
+        "query": "Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W2030765885"
+        ]
+      }
+    },
+    {
+      "id": "N02",
+      "type": "cross-lingual",
+      "request": {
+        "query": "prédiction de la structure des protéines par apprentissage profond",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "expect": {
+        "work_ids": [
+          "W3177828909"
+        ]
+      }
+    },
+    {
+      "id": "S01",
+      "type": "sort",
+      "request": {
+        "query": "CRISPR Cas9 genome editing",
+        "limit": 20,
+        "sort": "most_cited"
+      },
+      "check": "sorted_desc:cited_by_count"
+    },
+    {
+      "id": "S02",
+      "type": "sort",
+      "request": {
+        "query": "CRISPR Cas9 genome editing",
+        "limit": 20,
+        "sort": "newest"
+      },
+      "check": "sorted_desc:publication_year"
+    },
+    {
+      "id": "S05",
+      "type": "sort",
+      "request": {
+        "query": "CRISPR Cas9 genome editing",
+        "limit": 20,
+        "sort": "oldest"
+      },
+      "check": "sorted_asc:publication_year"
+    },
+    {
+      "id": "S04",
+      "type": "sort",
+      "request": {
+        "query": "Attention Is All You Need",
+        "limit": 20,
+        "sort": "most_cited"
+      },
+      "check": "first_is:W2626778328"
+    },
+    {
+      "id": "S06",
+      "type": "sort",
+      "request": {
+        "query": "attention",
+        "limit": 20,
+        "sort": "most_cited"
+      },
+      "check": "first_not_flagged",
+      "note": "No record whose citation count belongs to another work (benchmark/suspect-citation-records.json) may lead most_cited."
+    },
+    {
+      "id": "S07",
+      "type": "sort",
+      "request": {
+        "query": "pre-training deep bidirectional transformers for language understanding",
+        "limit": 20,
+        "sort": "most_cited"
+      },
+      "check": "first_not_flagged",
+      "note": "W2896457183 carries BERT's citations under a LIPIcs title; it must not lead."
+    },
+    {
+      "id": "B14",
+      "type": "sort",
+      "request": {
+        "query": "Attention Is All You Need",
+        "limit": 20,
+        "sort": "newest"
+      },
+      "check": "sorted_desc:publication_year"
+    },
+    {
+      "id": "S03",
+      "type": "duplicates",
+      "request": {
+        "query": "deep residual learning image recognition",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "check": "no_duplicate_titles"
+    },
+    {
+      "id": "C01",
+      "type": "duplicates",
+      "request": {
+        "query": "Deep Residual Learning for Image Recognition",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "check": "no_duplicate_titles"
+    },
+    {
+      "id": "B24",
+      "type": "filter",
+      "request": {
+        "query": "Attention Is All You Need",
+        "limit": 20,
+        "sort": "relevance",
+        "year_min": 2017,
+        "year_max": 2017
+      },
+      "check": "first_is:W2626778328"
+    },
+    {
+      "id": "B09",
+      "type": "filter",
+      "request": {
+        "query": "CRISPR Cas9 genome editing",
+        "limit": 20,
+        "sort": "relevance",
+        "year_min": 2023
+      },
+      "check": "years_within:2023:9999"
+    },
+    {
+      "id": "F01",
+      "type": "filter",
+      "request": {
+        "query": "transformer attention",
+        "limit": 20,
+        "sort": "relevance",
+        "year_max": 1990
+      },
+      "check": "years_within:1:1990"
+    },
+    {
+      "id": "F02",
+      "type": "filter",
+      "request": {
+        "query": "machine learning",
+        "limit": 20,
+        "sort": "relevance",
+        "topic": "",
+        "field": ""
+      },
+      "check": "non_empty"
+    },
+    {
+      "id": "B04",
+      "type": "offset",
+      "request": {
+        "query": "machine learning",
+        "limit": 50,
+        "offset": 0,
+        "sort": "relevance"
+      },
+      "check": "page_consistent"
+    },
+    {
+      "id": "B06",
+      "type": "offset",
+      "request": {
+        "query": "machine learning",
+        "limit": 50,
+        "offset": 950,
+        "sort": "relevance"
+      },
+      "check": "page_consistent"
+    },
+    {
+      "id": "B07",
+      "type": "offset",
+      "request": {
+        "query": "machine learning",
+        "limit": 50,
+        "offset": 5000,
+        "sort": "relevance"
+      },
+      "check": "past_pool"
+    },
+    {
+      "id": "B03",
+      "type": "latency",
+      "request": {
+        "query": "Introduction",
+        "limit": 20,
+        "sort": "relevance"
+      },
+      "check": "non_empty",
+      "heavy": true,
+      "note": "Held a thread ~2 minutes on an earlier build. Bounded since then; run only with --include-heavy after deploying it."
+    }
+  ]
+}

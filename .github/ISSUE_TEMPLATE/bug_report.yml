@@ -1,0 +1,24 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Include the exact command and the full error output.
+    validations: { required: true }
+  - type: input
+    id: stage
+    attributes:
+      label: Stage and index size
+      placeholder: "10k / 1m / full"
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "OS, Python version, CPU/GPU, package version"
+    validations: { required: true }
+  - type: markdown
+    attributes:
+      value: "Security issue? Do not file it here. See SECURITY.md."

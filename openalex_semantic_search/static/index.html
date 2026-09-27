@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Find papers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;650;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <div class="page">
+      <main class="content">
+        <p class="page-kicker">OpenAlex</p>
+        <h1 class="page-title">Find papers</h1>
+        <p class="page-lede">
+          Search the indexed OpenAlex stage. Judge a result, open it, or save it without leaving
+          the page.
+        </p>
+
+        <section id="corpus-progress" class="corpus-progress" aria-labelledby="corpus-progress-title" hidden>
+          <div class="corpus-progress-heading">
+            <div>
+              <p class="corpus-progress-kicker"><span class="live-dot" aria-hidden="true"></span> Corpus build</p>
+              <h2 id="corpus-progress-title" class="corpus-progress-title">
+                <span id="verified-records">—</span> embeddings verified on the serving host
+              </h2>
+            </div>
+            <span id="corpus-progress-state" class="corpus-progress-state">Live</span>
+          </div>
+          <div
+            id="source-progress"
+            class="source-progress"
+            role="progressbar"
+            aria-label="OpenAlex snapshot files reached"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <span id="source-progress-fill"></span>
+          </div>
+          <div class="corpus-progress-ledger" aria-live="polite">
+            <span><strong id="indexed-records">—</strong> searchable now</span>
+            <span><strong id="committed-shards">—</strong> committed shards</span>
+            <span id="source-files">Source scan —</span>
+            <time id="last-checkpoint"></time>
+          </div>
+          <p class="corpus-progress-note">
+            Verified embeddings are durable build artifacts. They become searchable after final index assembly.
+          </p>
+        </section>
+
+        <form id="search-form" class="find-search" role="search">
+          <div class="find-search-field">
+            <input
+              id="query"
+              class="find-search-input"
+              type="search"
+              autocomplete="off"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-controls="search-suggestions"
+              aria-expanded="false"
+              aria-label="Search literature"
+              placeholder="Search papers, authors, topics, or a title…"
+              required
+            />
+            <div id="search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+          </div>
+          <button type="submit" id="search-button" class="btn btn-primary">Search</button>
+        </form>
+
+        <div class="refine-row">
+          <button type="button" id="filters-toggle" class="btn btn-ghost" aria-expanded="false" aria-controls="filters">
+            Filters
+          </button>
+          <label class="sort-label" for="sort">Sort
+            <select id="sort">
+              <option value="relevance">Relevance</option>
+              <option value="most_cited">Most cited</option>
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+            </select>
+          </label>
+        </div>
+        <fieldset id="filters" class="filters" hidden>
+          <legend class="visually-hidden">Filters</legend>
+          <label>From year <input id="year-min" type="number" min="0" max="2100" placeholder="Any" /></label>
+          <label>To year <input id="year-max" type="number" min="0" max="2100" placeholder="Any" /></label>
+          <label>Min citations <input id="min-citations" type="number" min="0" placeholder="Any" /></label>
+          <label class="check"><input id="oa-only" type="checkbox" /> Open access only</label>
+          <button type="button" id="clear-filters" class="btn btn-ghost">Clear filters</button>
+        </fieldset>
+
+        <div id="notice" class="notice" role="alert" hidden></div>
+
+        <section id="empty-state" class="find-well">
+          <h2 class="find-well-heading">Try a query</h2>
+          <div class="find-examples">
+            <button type="button" class="find-example">attention in transformers</button>
+            <button type="button" class="find-example">residual learning for images</button>
+            <button type="button" class="find-example">large language model survey</button>
+          </div>
+          <p class="find-well-note">
+            Results come from a measured, immutable OpenAlex stage indexed by this lab. Metadata is
+            CC0 from OpenAlex.
+          </p>
+        </section>
+
+        <section id="search-summary" class="search-summary" hidden aria-labelledby="results-heading">
+          <div class="search-summary-row">
+            <h2 id="results-heading" tabindex="-1" class="search-summary-count" aria-live="polite"></h2>
+            <p id="search-summary-shown" class="search-summary-shown"></p>
+          </div>
+          <details class="search-details">
+            <summary><span>Search details</span><span id="search-details-state" class="search-details-state"></span></summary>
+            <div class="search-details-body">
+              <dl class="search-diagnostics">
+                <div><dt>Corpus</dt><dd id="metric-corpus">—</dd></div>
+                <div><dt>Eligible after filters</dt><dd id="metric-filtered">—</dd></div>
+                <div><dt>Refined candidates</dt><dd id="metric-candidates">—</dd></div>
+                <div><dt>Response time</dt><dd id="metric-time">—</dd></div>
+              </dl>
+              <p class="search-details-note">
+                Candidates are narrowed by the compressed index before ranking; counts describe this
+                lab stage, not all of OpenAlex.
+              </p>
+            </div>
+          </details>
+        </section>
+
+        <div id="skeletons" class="results" hidden aria-hidden="true">
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+        </div>
+        <p id="no-results" class="no-results" hidden>No matches. Try different terms.</p>
+        <ol id="results" class="results" aria-busy="false"></ol>
+
+        <div id="pager" class="pager" hidden>
+          <p id="pager-note" class="pager-note"></p>
+          <nav class="pager-controls" aria-label="Search result pages">
+            <button type="button" id="page-previous" class="btn btn-outline">Previous</button>
+            <span id="page-current" class="pager-current" aria-live="polite">Page 1 of 1</span>
+            <button type="button" id="page-next" class="btn btn-outline">Next</button>
+          </nav>
+        </div>
+
+        <details class="key-control">
+          <summary>Developer access</summary>
+          <p class="key-note">
+            This lab instance requires an application key; a public deployment must replace this
+            with server-side access control (see README).
+          </p>
+          <label for="api-key">Application key (stored only in this browser tab)</label>
+          <input id="api-key" type="password" autocomplete="off" placeholder="Paste the lab key" />
+        </details>
+      </main>
+
+      <aside id="preview-rail" class="preview-rail" hidden></aside>
+    </div>
+
+    <div id="preview-sheet" class="preview-sheet" hidden>
+      <div class="sheet-backdrop"></div>
+      <div class="sheet-panel"></div>
+    </div>
+
+    <template id="result-template">
+      <li>
+        <article class="result" tabindex="0">
+          <div class="signals">
+            <span class="work-type"></span>
+            <a class="source-badge" target="_blank" rel="noreferrer noopener" hidden>OpenAlex</a>
+            <span class="trust" hidden>Open access</span>
+            <span class="cited" hidden></span>
+          </div>
+          <h3 class="title-wrap"><button type="button" class="title"></button></h3>
+          <div class="meta">
+            <span class="authors"></span>
+            <span class="publication" hidden></span>
+          </div>
+          <p class="abstract" hidden></p>
+          <div class="actions" role="group">
+            <button type="button" class="action cite-action">Cite</button>
+            <a class="action view-action" target="_blank" rel="noreferrer noopener">↗ View</a>
+            <button type="button" class="action save-action">Save</button>
+          </div>
+          <div class="cite-panel" hidden>
+            <div class="cite-block">
+              <h4>APA</h4>
+              <p class="cite-apa"></p>
+              <button type="button" class="btn btn-ghost copy-apa">Copy</button>
+            </div>
+            <div class="cite-block">
+              <h4>BibTeX</h4>
+              <pre class="cite-bibtex"></pre>
+              <button type="button" class="btn btn-ghost copy-bibtex">Copy</button>
+            </div>
+          </div>
+        </article>
+      </li>
+    </template>
+
+    <template id="preview-template">
+      <div class="preview-inner">
+        <div class="preview-head">
+          <span class="page-kicker">Preview</span>
+          <button type="button" class="preview-close" aria-label="Close preview">×</button>
+        </div>
+        <div class="preview-body">
+          <h2 class="preview-title"></h2>
+          <p class="preview-meta"></p>
+          <p class="preview-links">
+            <span class="preview-cited" hidden></span>
+            <a class="preview-doi" target="_blank" rel="noreferrer noopener" hidden>DOI</a>
+            <a class="preview-source" target="_blank" rel="noreferrer noopener" hidden>Source</a>
+          </p>
+          <div class="preview-abstract-wrap" hidden>
+            <div class="preview-abstract-label">Abstract</div>
+            <p class="preview-abstract"></p>
+          </div>
+          <p class="preview-no-abstract" hidden>No abstract from this source.</p>
+          <div class="preview-actions">
+            <button type="button" class="btn btn-primary preview-save">Save</button>
+            <a class="btn btn-outline preview-view" target="_blank" rel="noreferrer noopener">↗ Open</a>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

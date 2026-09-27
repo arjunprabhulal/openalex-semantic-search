@@ -1,0 +1,2133 @@
+[
+  {
+    "id": "https://openalex.org/W2626778328",
+    "title": "Attention Is All You Need",
+    "abstract_inverted_index": {
+      "The": [
+        0,
+        18
+      ],
+      "dominant": [
+        1
+      ],
+      "sequence": [
+        2
+      ],
+      "transduction": [
+        3
+      ],
+      "models": [
+        4,
+        21,
+        60,
+        137
+      ],
+      "are": [
+        5
+      ],
+      "based": [
+        6,
+        41
+      ],
+      "on": [
+        7,
+        43,
+        53,
+        82,
+        124
+      ],
+      "complex": [
+        8
+      ],
+      "recurrent": [
+        9
+      ],
+      "or": [
+        10
+      ],
+      "convolutional": [
+        11
+      ],
+      "neural": [
+        12
+      ],
+      "networks": [
+        13
+      ],
+      "in": [
+        14,
+        64
+      ],
+      "an": [
+        15,
+        29
+      ],
+      "encoder-decoder": [
+        16
+      ],
+      "configuration.": [
+        17
+      ],
+      "best": [
+        19,
+        93,
+        136
+      ],
+      "performing": [
+        20
+      ],
+      "also": [
+        22
+      ],
+      "connect": [
+        23
+      ],
+      "the": [
+        24,
+        39,
+        83,
+        91,
+        102,
+        131,
+        135,
+        139,
+        144
+      ],
+      "encoder": [
+        25
+      ],
+      "and": [
+        26,
+        49,
+        70,
+        162
+      ],
+      "decoder": [
+        27
+      ],
+      "through": [
+        28
+      ],
+      "attention": [
+        30,
+        44
+      ],
+      "mechanism.": [
+        31
+      ],
+      "We": [
+        32,
+        141
+      ],
+      "propose": [
+        33
+      ],
+      "a": [
+        34,
+        111,
+        127
+      ],
+      "new": [
+        35,
+        112
+      ],
+      "simple": [
+        36
+      ],
+      "network": [
+        37
+      ],
+      "architecture,": [
+        38
+      ],
+      "Transformer,": [
+        40
+      ],
+      "solely": [
+        42
+      ],
+      "mechanisms,": [
+        45
+      ],
+      "dispensing": [
+        46
+      ],
+      "with": [
+        47,
+        160
+      ],
+      "recurrence": [
+        48
+      ],
+      "convolutions": [
+        50
+      ],
+      "entirely.": [
+        51
+      ],
+      "Experiments": [
+        52
+      ],
+      "two": [
+        54
+      ],
+      "machine": [
+        55
+      ],
+      "translation": [
+        56,
+        87,
+        106
+      ],
+      "tasks": [
+        57,
+        150
+      ],
+      "show": [
+        58,
+        142
+      ],
+      "these": [
+        59
+      ],
+      "to": [
+        61,
+        75,
+        148,
+        155
+      ],
+      "be": [
+        62
+      ],
+      "superior": [
+        63
+      ],
+      "quality": [
+        65
+      ],
+      "while": [
+        66
+      ],
+      "being": [
+        67
+      ],
+      "more": [
+        68
+      ],
+      "parallelizable": [
+        69
+      ],
+      "requiring": [
+        71
+      ],
+      "significantly": [
+        72
+      ],
+      "less": [
+        73
+      ],
+      "time": [
+        74
+      ],
+      "train.": [
+        76
+      ],
+      "Our": [
+        77
+      ],
+      "model": [
+        78,
+        109
+      ],
+      "achieves": [
+        79
+      ],
+      "28.4": [
+        80
+      ],
+      "BLEU": [
+        81,
+        115
+      ],
+      "WMT": [
+        84,
+        103
+      ],
+      "2014": [
+        85,
+        104
+      ],
+      "English-to-German": [
+        86
+      ],
+      "task,": [
+        88,
+        107
+      ],
+      "improving": [
+        89
+      ],
+      "over": [
+        90,
+        98
+      ],
+      "existing": [
+        92
+      ],
+      "results,": [
+        94
+      ],
+      "including": [
+        95
+      ],
+      "ensembles": [
+        96
+      ],
+      "by": [
+        97,
+        151
+      ],
+      "2": [
+        99
+      ],
+      "BLEU.": [
+        100
+      ],
+      "On": [
+        101
+      ],
+      "English-to-French": [
+        105
+      ],
+      "our": [
+        108
+      ],
+      "establishes": [
+        110
+      ],
+      "single-model": [
+        113
+      ],
+      "state-of-the-art": [
+        114
+      ],
+      "score": [
+        116
+      ],
+      "of": [
+        117,
+        130,
+        134
+      ],
+      "41.8": [
+        118
+      ],
+      "after": [
+        119
+      ],
+      "training": [
+        120,
+        132,
+        164
+      ],
+      "for": [
+        121
+      ],
+      "3.5": [
+        122
+      ],
+      "days": [
+        123
+      ],
+      "eight": [
+        125
+      ],
+      "GPUs,": [
+        126
+      ],
+      "small": [
+        128
+      ],
+      "fraction": [
+        129
+      ],
+      "costs": [
+        133
+      ],
+      "from": [
+        138
+      ],
+      "literature.": [
+        140
+      ],
+      "that": [
+        143
+      ],
+      "Transformer": [
+        145
+      ],
+      "generalizes": [
+        146
+      ],
+      "well": [
+        147
+      ],
+      "other": [
+        149
+      ],
+      "applying": [
+        152
+      ],
+      "it": [
+        153
+      ],
+      "successfully": [
+        154
+      ],
+      "English": [
+        156
+      ],
+      "constituency": [
+        157
+      ],
+      "parsing": [
+        158
+      ],
+      "both": [
+        159
+      ],
+      "large": [
+        161
+      ],
+      "limited": [
+        163
+      ],
+      "data.": [
+        165
+      ]
+    },
+    "authorships": [
+      {
+        "author": {
+          "display_name": "Ashish Vaswani"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Noam Shazeer"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Niki Parmar"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Jakob Uszkoreit"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Llion Jones"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Aidan N. Gomez"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Łukasz Kaiser"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Illia Polosukhin"
+        }
+      }
+    ],
+    "publication_year": 2017,
+    "doi": "https://doi.org/10.48550/arXiv.1706.03762",
+    "cited_by_count": 7073,
+    "primary_topic": {
+      "display_name": "Natural Language Processing Techniques",
+      "field": {
+        "display_name": "Computer Science"
+      }
+    },
+    "open_access": {
+      "is_oa": true,
+      "oa_url": "https://arxiv.org/abs/1706.03762"
+    },
+    "type": "preprint",
+    "primary_location": {
+      "source": {
+        "display_name": "arXiv (Cornell University)"
+      },
+      "landing_page_url": "https://arxiv.org/abs/1706.03762"
+    },
+    "publication_date": "2025-08-23"
+  },
+  {
+    "id": "https://openalex.org/W2194775991",
+    "title": "Deep Residual Learning for Image Recognition",
+    "abstract_inverted_index": {
+      "Deeper": [
+        0
+      ],
+      "neural": [
+        1
+      ],
+      "networks": [
+        2,
+        19,
+        57
+      ],
+      "are": [
+        3,
+        21,
+        58,
+        170
+      ],
+      "more": [
+        4
+      ],
+      "difficult": [
+        5
+      ],
+      "to": [
+        6,
+        14,
+        39,
+        60,
+        83,
+        150,
+        175
+      ],
+      "train.": [
+        7
+      ],
+      "We": [
+        8,
+        28,
+        48,
+        124
+      ],
+      "present": [
+        9,
+        126
+      ],
+      "a": [
+        10,
+        79,
+        157
+      ],
+      "residual": [
+        11,
+        35,
+        56,
+        76,
+        102,
+        168
+      ],
+      "learning": [
+        12,
+        34,
+        45
+      ],
+      "framework": [
+        13
+      ],
+      "ease": [
+        15
+      ],
+      "the": [
+        16,
+        31,
+        40,
+        71,
+        108,
+        115,
+        119,
+        162,
+        185,
+        189
+      ],
+      "training": [
+        17
+      ],
+      "of": [
+        18,
+        44,
+        81,
+        100,
+        137,
+        140,
+        172,
+        191
+      ],
+      "that": [
+        20,
+        54
+      ],
+      "substantially": [
+        22
+      ],
+      "deeper": [
+        23,
+        88
+      ],
+      "than": [
+        24,
+        89
+      ],
+      "those": [
+        25
+      ],
+      "used": [
+        26
+      ],
+      "previously.": [
+        27
+      ],
+      "explicitly": [
+        29
+      ],
+      "reformulate": [
+        30
+      ],
+      "layers": [
+        32,
+        85
+      ],
+      "as": [
+        33
+      ],
+      "functions": [
+        36
+      ],
+      "with": [
+        37,
+        78,
+        130
+      ],
+      "reference": [
+        38
+      ],
+      "layer": [
+        41
+      ],
+      "inputs,": [
+        42
+      ],
+      "instead": [
+        43
+      ],
+      "unreferenced": [
+        46
+      ],
+      "functions.": [
+        47
+      ],
+      "provide": [
+        49
+      ],
+      "comprehensive": [
+        50
+      ],
+      "empirical": [
+        51
+      ],
+      "evidence": [
+        52
+      ],
+      "showing": [
+        53
+      ],
+      "these": [
+        55,
+        101
+      ],
+      "easier": [
+        59
+      ],
+      "optimize,": [
+        61
+      ],
+      "and": [
+        62,
+        132,
+        198
+      ],
+      "can": [
+        63
+      ],
+      "gain": [
+        64
+      ],
+      "accuracy": [
+        65
+      ],
+      "from": [
+        66
+      ],
+      "considerably": [
+        67
+      ],
+      "increased": [
+        68
+      ],
+      "depth.": [
+        69
+      ],
+      "On": [
+        70
+      ],
+      "ImageNet": [
+        72,
+        109,
+        192,
+        194
+      ],
+      "dataset": [
+        73
+      ],
+      "we": [
+        74,
+        155,
+        182
+      ],
+      "evaluate": [
+        75
+      ],
+      "nets": [
+        77,
+        91,
+        103,
+        169
+      ],
+      "depth": [
+        80,
+        136
+      ],
+      "up": [
+        82
+      ],
+      "152": [
+        84
+      ],
+      "-": [
+        86
+      ],
+      "8×": [
+        87
+      ],
+      "VGG": [
+        90
+      ],
+      "[40]": [
+        92
+      ],
+      "but": [
+        93
+      ],
+      "still": [
+        94
+      ],
+      "having": [
+        95
+      ],
+      "lower": [
+        96
+      ],
+      "complexity.": [
+        97
+      ],
+      "An": [
+        98
+      ],
+      "ensemble": [
+        99
+      ],
+      "achieves": [
+        104
+      ],
+      "3.57%": [
+        105
+      ],
+      "error": [
+        106
+      ],
+      "on": [
+        107,
+        118,
+        128,
+        161,
+        188
+      ],
+      "test": [
+        110
+      ],
+      "set.": [
+        111
+      ],
+      "This": [
+        112
+      ],
+      "result": [
+        113
+      ],
+      "won": [
+        114,
+        184
+      ],
+      "1st": [
+        116,
+        186
+      ],
+      "place": [
+        117
+      ],
+      "ILSVRC": [
+        120,
+        176
+      ],
+      "2015": [
+        121,
+        179
+      ],
+      "classification": [
+        122
+      ],
+      "task.": [
+        123
+      ],
+      "also": [
+        125,
+        183
+      ],
+      "analysis": [
+        127
+      ],
+      "CIFAR-10": [
+        129
+      ],
+      "100": [
+        131
+      ],
+      "1000": [
+        133
+      ],
+      "layers.": [
+        134
+      ],
+      "The": [
+        135
+      ],
+      "representations": [
+        138
+      ],
+      "is": [
+        139
+      ],
+      "central": [
+        141
+      ],
+      "importance": [
+        142
+      ],
+      "for": [
+        143
+      ],
+      "many": [
+        144
+      ],
+      "visual": [
+        145
+      ],
+      "recognition": [
+        146
+      ],
+      "tasks.": [
+        147
+      ],
+      "Solely": [
+        148
+      ],
+      "due": [
+        149
+      ],
+      "our": [
+        151,
+        173
+      ],
+      "extremely": [
+        152
+      ],
+      "deep": [
+        153
+      ],
+      "representations,": [
+        154
+      ],
+      "obtain": [
+        156
+      ],
+      "28%": [
+        158
+      ],
+      "relative": [
+        159
+      ],
+      "improvement": [
+        160
+      ],
+      "COCO": [
+        163,
+        178,
+        196,
+        199
+      ],
+      "object": [
+        164
+      ],
+      "detection": [
+        165
+      ],
+      "dataset.": [
+        166
+      ],
+      "Deep": [
+        167
+      ],
+      "foundations": [
+        171
+      ],
+      "submissions": [
+        174
+      ],
+      "&": [
+        177
+      ],
+      "competitions1,": [
+        180
+      ],
+      "where": [
+        181
+      ],
+      "places": [
+        187
+      ],
+      "tasks": [
+        190
+      ],
+      "detection,": [
+        193,
+        197
+      ],
+      "localization,": [
+        195
+      ],
+      "segmentation.": [
+        200
+      ]
+    },
+    "authorships": [
+      {
+        "author": {
+          "display_name": "Kaiming He"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Xiangyu Zhang"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Shaoqing Ren"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Jian Sun"
+        }
+      }
+    ],
+    "publication_year": 2016,
+    "doi": "https://doi.org/10.1109/cvpr.2016.90",
+    "cited_by_count": 227820,
+    "primary_topic": {
+      "display_name": "Advanced Neural Network Applications",
+      "field": {
+        "display_name": "Computer Science"
+      }
+    },
+    "open_access": {
+      "is_oa": true,
+      "oa_url": "https://repositorio.unal.edu.co/handle/unal/81443"
+    },
+    "type": "conference-paper",
+    "primary_location": {
+      "source": {
+        "display_name": ""
+      },
+      "landing_page_url": "https://doi.org/10.1109/cvpr.2016.90"
+    },
+    "publication_date": "2016-06-01"
+  },
+  {
+    "id": "https://openalex.org/W2963341956",
+    "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    "abstract_inverted_index": {
+      "Jacob": [
+        0
+      ],
+      "Devlin,": [
+        1
+      ],
+      "Ming-Wei": [
+        2
+      ],
+      "Chang,": [
+        3
+      ],
+      "Kenton": [
+        4
+      ],
+      "Lee,": [
+        5
+      ],
+      "Kristina": [
+        6
+      ],
+      "Toutanova.": [
+        7
+      ],
+      "Proceedings": [
+        8
+      ],
+      "of": [
+        9,
+        13,
+        18
+      ],
+      "the": [
+        10,
+        14,
+        19
+      ],
+      "2019": [
+        11
+      ],
+      "Conference": [
+        12
+      ],
+      "North": [
+        15
+      ],
+      "American": [
+        16
+      ],
+      "Chapter": [
+        17
+      ],
+      "Association": [
+        20
+      ],
+      "for": [
+        21
+      ],
+      "Computational": [
+        22
+      ],
+      "Linguistics:": [
+        23
+      ],
+      "Human": [
+        24
+      ],
+      "Language": [
+        25
+      ],
+      "Technologies,": [
+        26
+      ],
+      "Volume": [
+        27
+      ],
+      "1": [
+        28
+      ],
+      "(Long": [
+        29
+      ],
+      "and": [
+        30
+      ],
+      "Short": [
+        31
+      ],
+      "Papers).": [
+        32
+      ],
+      "2019.": [
+        33
+      ]
+    },
+    "authorships": [
+      {
+        "author": {
+          "display_name": "Jacob Devlin"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Ming‐Wei Chang"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Kenton Lee"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Kristina Toutanova"
+        }
+      }
+    ],
+    "publication_year": 2019,
+    "doi": "https://doi.org/10.18653/v1/n19-1423",
+    "cited_by_count": 33353,
+    "primary_topic": {
+      "display_name": "Topic Modeling",
+      "field": {
+        "display_name": "Computer Science"
+      }
+    },
+    "open_access": {
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.18653/v1/n19-1423"
+    },
+    "type": "conference-paper",
+    "primary_location": {
+      "source": {
+        "display_name": ""
+      },
+      "landing_page_url": "https://doi.org/10.18653/v1/n19-1423"
+    },
+    "publication_date": "2019-01-01"
+  },
+  {
+    "id": "https://openalex.org/W4297733535",
+    "title": "Graph Attention Networks",
+    "abstract_inverted_index": {
+      "We": [
+        0
+      ],
+      "present": [
+        1
+      ],
+      "graph": [
+        2,
+        28,
+        75,
+        88,
+        120
+      ],
+      "attention": [
+        3
+      ],
+      "networks": [
+        4,
+        90
+      ],
+      "(GATs),": [
+        5
+      ],
+      "novel": [
+        6
+      ],
+      "neural": [
+        7,
+        89
+      ],
+      "network": [
+        8,
+        128
+      ],
+      "architectures": [
+        9
+      ],
+      "that": [
+        10
+      ],
+      "operate": [
+        11
+      ],
+      "on": [
+        12,
+        27,
+        72
+      ],
+      "graph-structured": [
+        13
+      ],
+      "data,": [
+        14
+      ],
+      "leveraging": [
+        15
+      ],
+      "masked": [
+        16
+      ],
+      "self-attentional": [
+        17
+      ],
+      "layers": [
+        18,
+        35
+      ],
+      "to": [
+        19,
+        41,
+        53,
+        98
+      ],
+      "address": [
+        20,
+        82
+      ],
+      "the": [
+        21,
+        74,
+        122
+      ],
+      "shortcomings": [
+        22
+      ],
+      "of": [
+        23,
+        63,
+        86
+      ],
+      "prior": [
+        24
+      ],
+      "methods": [
+        25
+      ],
+      "based": [
+        26
+      ],
+      "convolutions": [
+        29
+      ],
+      "or": [
+        30,
+        70,
+        110
+      ],
+      "their": [
+        31,
+        44
+      ],
+      "approximations.": [
+        32
+      ],
+      "By": [
+        33
+      ],
+      "stacking": [
+        34
+      ],
+      "in": [
+        36,
+        56
+      ],
+      "which": [
+        37
+      ],
+      "nodes": [
+        38,
+        55
+      ],
+      "are": [
+        39
+      ],
+      "able": [
+        40
+      ],
+      "attend": [
+        42
+      ],
+      "over": [
+        43
+      ],
+      "neighborhoods'": [
+        45
+      ],
+      "features,": [
+        46
+      ],
+      "we": [
+        47,
+        81
+      ],
+      "enable": [
+        48
+      ],
+      "(implicitly)": [
+        49
+      ],
+      "specifying": [
+        50
+      ],
+      "different": [
+        51,
+        54
+      ],
+      "weights": [
+        52
+      ],
+      "a": [
+        57,
+        133
+      ],
+      "neighborhood,": [
+        58
+      ],
+      "without": [
+        59
+      ],
+      "requiring": [
+        60
+      ],
+      "any": [
+        61
+      ],
+      "kind": [
+        62
+      ],
+      "costly": [
+        64
+      ],
+      "matrix": [
+        65
+      ],
+      "operation": [
+        66
+      ],
+      "(such": [
+        67
+      ],
+      "as": [
+        68,
+        100,
+        102,
+        130,
+        132
+      ],
+      "inversion)": [
+        69
+      ],
+      "depending": [
+        71
+      ],
+      "knowing": [
+        73
+      ],
+      "structure": [
+        76
+      ],
+      "upfront.": [
+        77
+      ],
+      "In": [
+        78
+      ],
+      "this": [
+        79
+      ],
+      "way,": [
+        80
+      ],
+      "several": [
+        83
+      ],
+      "key": [
+        84
+      ],
+      "challenges": [
+        85
+      ],
+      "spectral-based": [
+        87
+      ],
+      "simultaneously,": [
+        91
+      ],
+      "and": [
+        92,
+        118,
+        125
+      ],
+      "make": [
+        93
+      ],
+      "our": [
+        94
+      ],
+      "model": [
+        95
+      ],
+      "readily": [
+        96
+      ],
+      "applicable": [
+        97
+      ],
+      "inductive": [
+        99,
+        119
+      ],
+      "well": [
+        101,
+        131
+      ],
+      "transductive": [
+        103,
+        117
+      ],
+      "problems.": [
+        104
+      ],
+      "Our": [
+        105
+      ],
+      "GAT": [
+        106
+      ],
+      "models": [
+        107
+      ],
+      "have": [
+        108
+      ],
+      "achieved": [
+        109
+      ],
+      "matched": [
+        111
+      ],
+      "state-of-the-art": [
+        112
+      ],
+      "results": [
+        113
+      ],
+      "across": [
+        114
+      ],
+      "four": [
+        115
+      ],
+      "established": [
+        116
+      ],
+      "benchmarks:": [
+        121
+      ],
+      "Cora,": [
+        123
+      ],
+      "Citeseer": [
+        124
+      ],
+      "Pubmed": [
+        126
+      ],
+      "citation": [
+        127
+      ],
+      "datasets,": [
+        129
+      ],
+      "protein-protein": [
+        134
+      ],
+      "interaction": [
+        135
+      ],
+      "dataset": [
+        136
+      ],
+      "(wherein": [
+        137
+      ],
+      "test": [
+        138
+      ],
+      "graphs": [
+        139
+      ],
+      "remain": [
+        140
+      ],
+      "unseen": [
+        141
+      ],
+      "during": [
+        142
+      ],
+      "training).": [
+        143
+      ]
+    },
+    "authorships": [
+      {
+        "author": {
+          "display_name": "Veli\\v{c}kovi\\'c, Petar"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Guillem Cucurull"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Arantxa Casanova"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Adriana Romero"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Li\\`o, Pietro"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Yoshua Bengio"
+        }
+      }
+    ],
+    "publication_year": 2018,
+    "doi": null,
+    "cited_by_count": 8398,
+    "primary_topic": {
+      "display_name": "Advanced Graph Neural Networks",
+      "field": {
+        "display_name": "Computer Science"
+      }
+    },
+    "open_access": {
+      "is_oa": true,
+      "oa_url": "https://arxiv.org/pdf/1710.10903"
+    },
+    "type": "preprint",
+    "primary_location": {
+      "source": {
+        "display_name": "arXiv (Cornell University)"
+      },
+      "landing_page_url": "https://arxiv.org/abs/1710.10903"
+    },
+    "publication_date": "2017-10-30"
+  },
+  {
+    "id": "https://openalex.org/W4362515116",
+    "title": "A Survey of Large Language Models",
+    "abstract_inverted_index": {
+      "Abstract": [
+        0
+      ],
+      "The": [
+        1
+      ],
+      "rapid": [
+        2
+      ],
+      "evolution": [
+        3
+      ],
+      "of": [
+        4,
+        147,
+        200
+      ],
+      "large": [
+        5
+      ],
+      "language": [
+        6,
+        136
+      ],
+      "models": [
+        7,
+        90
+      ],
+      "(LLMs)": [
+        8
+      ],
+      "has": [
+        9
+      ],
+      "driven": [
+        10
+      ],
+      "a": [
+        11,
+        186
+      ],
+      "transformative": [
+        12
+      ],
+      "shift": [
+        13
+      ],
+      "in": [
+        14,
+        53
+      ],
+      "artificial": [
+        15
+      ],
+      "intelligence": [
+        16
+      ],
+      "(AI),": [
+        17
+      ],
+      "reshaping": [
+        18
+      ],
+      "both": [
+        19
+      ],
+      "research": [
+        20,
+        154
+      ],
+      "paradigms": [
+        21
+      ],
+      "and": [
+        22,
+        32,
+        44,
+        74,
+        84,
+        94,
+        98,
+        109,
+        116,
+        123,
+        139,
+        144,
+        164,
+        167,
+        178,
+        188,
+        197
+      ],
+      "practical": [
+        23
+      ],
+      "applications.": [
+        24
+      ],
+      "Distinguished": [
+        25
+      ],
+      "from": [
+        26
+      ],
+      "their": [
+        27,
+        41,
+        96
+      ],
+      "predecessors": [
+        28
+      ],
+      "by": [
+        29
+      ],
+      "unprecedented": [
+        30
+      ],
+      "scale": [
+        31
+      ],
+      "advanced": [
+        33
+      ],
+      "capabilities,": [
+        34,
+        137
+      ],
+      "LLMs": [
+        35
+      ],
+      "necessitate": [
+        36
+      ],
+      "new": [
+        37
+      ],
+      "frameworks": [
+        38
+      ],
+      "for": [
+        39,
+        129,
+        191
+      ],
+      "understanding": [
+        40,
+        192
+      ],
+      "development,": [
+        42
+      ],
+      "behavior,": [
+        43
+      ],
+      "societal": [
+        45
+      ],
+      "impact.": [
+        46
+      ],
+      "This": [
+        47
+      ],
+      "survey": [
+        48,
+        182
+      ],
+      "systematically": [
+        49
+      ],
+      "reviews": [
+        50
+      ],
+      "recent": [
+        51
+      ],
+      "advancements": [
+        52
+      ],
+      "LLM": [
+        54,
+        201
+      ],
+      "techniques": [
+        55
+      ],
+      "across": [
+        56
+      ],
+      "four": [
+        57
+      ],
+      "key": [
+        58,
+        130
+      ],
+      "dimensions:": [
+        59
+      ],
+      "(1)": [
+        60
+      ],
+      "pre-training": [
+        61
+      ],
+      "methodologies,": [
+        62
+      ],
+      "which": [
+        63,
+        87,
+        141
+      ],
+      "establish": [
+        64
+      ],
+      "core": [
+        65,
+        135
+      ],
+      "model": [
+        66,
+        148
+      ],
+      "capabilities": [
+        67
+      ],
+      "through": [
+        68
+      ],
+      "large-scale": [
+        69
+      ],
+      "self-supervised": [
+        70
+      ],
+      "training,": [
+        71
+      ],
+      "architectural": [
+        72
+      ],
+      "innovations,": [
+        73
+      ],
+      "data": [
+        75
+      ],
+      "curation": [
+        76
+      ],
+      "strategies;": [
+        77
+      ],
+      "(2)": [
+        78
+      ],
+      "post-training": [
+        79
+      ],
+      "techniques,": [
+        80
+      ],
+      "including": [
+        81,
+        156
+      ],
+      "supervised": [
+        82
+      ],
+      "fine-tuning": [
+        83
+      ],
+      "reinforcement": [
+        85
+      ],
+      "learning,": [
+        86,
+        106
+      ],
+      "adapt": [
+        88
+      ],
+      "foundational": [
+        89
+      ],
+      "to": [
+        91,
+        184
+      ],
+      "downstream": [
+        92
+      ],
+      "tasks": [
+        93
+      ],
+      "enhance": [
+        95
+      ],
+      "alignment": [
+        97
+      ],
+      "safety;": [
+        99
+      ],
+      "(3)": [
+        100
+      ],
+      "utilization": [
+        101
+      ],
+      "strategies,": [
+        102
+      ],
+      "such": [
+        103,
+        133
+      ],
+      "as": [
+        104,
+        134
+      ],
+      "in-context": [
+        105
+      ],
+      "prompt": [
+        107
+      ],
+      "engineering,": [
+        108
+      ],
+      "agentic": [
+        110,
+        165
+      ],
+      "reasoning,": [
+        111,
+        138
+      ],
+      "that": [
+        112
+      ],
+      "optimize": [
+        113
+      ],
+      "real-world": [
+        114
+      ],
+      "deployment": [
+        115
+      ],
+      "enable": [
+        117
+      ],
+      "effective": [
+        118
+      ],
+      "interaction": [
+        119
+      ],
+      "with": [
+        120
+      ],
+      "external": [
+        121
+      ],
+      "environments;": [
+        122
+      ],
+      "(4)": [
+        124
+      ],
+      "evaluation": [
+        125
+      ],
+      "methods,": [
+        126
+      ],
+      "encompassing": [
+        127
+      ],
+      "benchmarks": [
+        128
+      ],
+      "ability": [
+        131
+      ],
+      "dimensions": [
+        132
+      ],
+      "safety,": [
+        140
+      ],
+      "support": [
+        142
+      ],
+      "comprehensive": [
+        143,
+        189
+      ],
+      "reliable": [
+        145
+      ],
+      "assessment": [
+        146
+      ],
+      "performance.": [
+        149
+      ],
+      "Additionally,": [
+        150
+      ],
+      "we": [
+        151
+      ],
+      "identify": [
+        152
+      ],
+      "critical": [
+        153
+      ],
+      "issues,": [
+        155
+      ],
+      "those": [
+        157
+      ],
+      "concerning": [
+        158
+      ],
+      "theoretical": [
+        159
+      ],
+      "foundations,": [
+        160
+      ],
+      "efficient": [
+        161
+      ],
+      "scaling,": [
+        162
+      ],
+      "alignment,": [
+        163
+      ],
+      "capability,": [
+        166
+      ],
+      "highlight": [
+        168
+      ],
+      "the": [
+        169,
+        193
+      ],
+      "open": [
+        170
+      ],
+      "challenges": [
+        171
+      ],
+      "they": [
+        172
+      ],
+      "present.": [
+        173
+      ],
+      "By": [
+        174
+      ],
+      "synthesizing": [
+        175
+      ],
+      "state-of-the-art": [
+        176
+      ],
+      "insights": [
+        177
+      ],
+      "emerging": [
+        179
+      ],
+      "trends,": [
+        180
+      ],
+      "this": [
+        181
+      ],
+      "aims": [
+        183
+      ],
+      "provide": [
+        185
+      ],
+      "systematic": [
+        187
+      ],
+      "framework": [
+        190
+      ],
+      "trajectory,": [
+        194
+      ],
+      "current": [
+        195
+      ],
+      "limitations,": [
+        196
+      ],
+      "future": [
+        198
+      ],
+      "directions": [
+        199
+      ],
+      "progress.": [
+        202
+      ]
+    },
+    "authorships": [
+      {
+        "author": {
+          "display_name": "Wayne Xin Zhao"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Kun Zhou"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Junyi Li"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Tianyi Tang"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Zican Dong"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Yupeng Hou"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Beichen Zhang"
+        }
+      },
+      {
+        "author": {
+          "display_name": "Yingqian Min"
+        }
+      }
+    ],
+    "publication_year": 2023,
+    "doi": "https://doi.org/10.1007/s11704-026-60308-3",
+    "cited_by_count": 1511,
+    "primary_topic": {
+      "display_name": "Topic Modeling",
+      "field": {
+        "display_name": "Computer Science"
+      }
+    },
+    "open_access": {
+      "is_oa": true,
+      "oa_url": "https://link.springer.com/content/pdf/10.1007/s11704-026-60308-3.pdf"
+    },
+    "type": "article",
+    "primary_location": {
+      "source": {
+        "display_name": "Frontiers of Computer Science"
+      },
+      "landing_page_url": "https://doi.org/10.1007/s11704-026-60308-3"
+    },
+    "publication_date": "2026-05-09"
+  }
+]

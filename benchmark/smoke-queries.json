@@ -1,0 +1,16 @@
+{
+  "semantic": [
+    "transformer architectures for sequence modeling",
+    "residual networks for image classification",
+    "graph neural networks with attention",
+    "pretrained bidirectional language representation",
+    "capabilities and risks of large language models"
+  ],
+  "exact_titles": [
+    "Attention Is All You Need",
+    "Deep Residual Learning for Image Recognition",
+    "BERT Pre-training of Deep Bidirectional Transformers",
+    "Graph Attention Networks",
+    "A Survey of Large Language Models"
+  ]
+}

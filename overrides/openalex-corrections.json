@@ -1,0 +1,100 @@
+{
+  "format_version": 1,
+  "description": "Hand-verified corrections for OpenAlex records that are wrong upstream. Each entry records only fields verifiable from the work's own OpenAlex record or its title. Citation counts are never replaced because no verified replacement value exists; a count proven to belong to another work is instead marked cited_by_count_unreliable, which ranks, sorts and filters the record as if it had no citations while the card keeps the published number and shows citation_count_unreliable.",
+  "verified_at": "2026-09-24",
+  "entries": {
+    "W2626778328": {
+      "note": "Canonical Transformer paper. created_date 2017-06-23 and counts_by_year starting 2017 prove the record predates its claimed 2025 date; upstream primary_location was overwritten by a 10.65215 predatory mirror whose DOI and PDF both 404. Values below are taken from the record's own surviving arXiv locations and biblio (NeurIPS vol 30, pp 5998-6008).",
+      "publication_year": 2017,
+      "publication_date": "2017-06-12",
+      "doi": "https://doi.org/10.48550/arXiv.1706.03762",
+      "venue": "arXiv (Cornell University)",
+      "landing_url": "https://arxiv.org/abs/1706.03762",
+      "oa_url": "https://arxiv.org/pdf/1706.03762",
+      "is_oa": true
+    },
+    "W1945524409": {
+      "note": "Erikson, Childhood and Society (1950). Upstream publication_year 2026 is a Zenodo deposit date; citations predate it by 14 years.",
+      "publication_year": 1950
+    },
+    "W2008942963": {
+      "note": "Dewey, Art as Experience (1934). The record's own title carries the correct year while publication_year says 2026.",
+      "publication_year": 1934
+    },
+    "W4385245566": {
+      "note": "Upstream merge: 10.4230/lipics.itp.2023.19 is a small Dagstuhl paper whose title and abstract are genuine for that DOI, but the record carries 79,061 citations. counts_by_year from 2013 predate the 2023 paper. Source: benchmark/suspect-citation-records.json, https://api.openalex.org/works/W4385245566.",
+      "verified_at": "2026-09-24",
+      "cited_by_count_unreliable": true
+    },
+    "W2896457183": {
+      "note": "Upstream merge: 10.4230/lipics.cosit.2022.18 is a small Dagstuhl paper whose title and abstract are genuine for that DOI, but the record carries 46,030 citations. BERT (arXiv 1810.04805 is a location on the record); ~46k citations. Source: benchmark/suspect-citation-records.json, https://api.openalex.org/works/W2896457183.",
+      "verified_at": "2026-09-24",
+      "cited_by_count_unreliable": true
+    },
+    "W2965373594": {
+      "note": "Upstream merge: 10.4230/lipics.cp.2025.31 is a small Dagstuhl paper whose title and abstract are genuine for that DOI, but the record carries 17,517 citations. RoBERTa (arXiv 1907.11692; authors Liu, Ott, Goyal). Source: benchmark/suspect-citation-records.json, https://api.openalex.org/works/W2965373594.",
+      "verified_at": "2026-09-24",
+      "cited_by_count_unreliable": true
+    },
+    "W2964015378": {
+      "note": "Upstream merge: 10.4230/lipics.ecoop.2025.6 is a small Dagstuhl paper whose title and abstract are genuine for that DOI, but the record carries 16,322 citations. record created 2019-07-30 for a 2025 paper; counts_by_year from 2016. Source: benchmark/suspect-citation-records.json, https://api.openalex.org/works/W2964015378.",
+      "verified_at": "2026-09-24",
+      "cited_by_count_unreliable": true
+    },
+    "W4292779060": {
+      "note": "Upstream merge: 10.4230/lipics.giscience.2023.43 is a small Dagstuhl paper whose title and abstract are genuine for that DOI, but the record carries 14,371 citations. counts_by_year from 2017 predate the 2023 paper. Source: benchmark/suspect-citation-records.json, https://api.openalex.org/works/W4292779060.",
+      "verified_at": "2026-09-24",
+      "cited_by_count_unreliable": true
+    },
+    "W4294558607": {
+      "note": "Upstream merge: 10.4230/lipics.sea.2024.20 is a small Dagstuhl paper whose title and abstract are genuine for that DOI, but the record carries 5,418 citations. counts_by_year from 2017 predate the 2024 paper. Source: benchmark/suspect-citation-records.json, https://api.openalex.org/works/W4294558607.",
+      "verified_at": "2026-09-24",
+      "cited_by_count_unreliable": true
+    },
+    "W2963285578": {
+      "note": "Upstream merge: 10.4230/lipics.itcs.2018.22 is a small Dagstuhl paper whose title and abstract are genuine for that DOI, but the record carries 2,942 citations. ELU paper (landing page arXiv 1511.07289 in the index snapshot). Source: benchmark/suspect-citation-records.json, https://api.openalex.org/works/W2963285578.",
+      "verified_at": "2026-09-24",
+      "cited_by_count_unreliable": true
+    },
+    "W4311415873": {
+      "note": "Upstream merge: 10.4230/lipics.wads.2025.45 is a small Dagstuhl paper whose title and abstract are genuine for that DOI, but the record carries 2,360 citations. counts_by_year from 2014 predate the 2025 paper. Source: benchmark/suspect-citation-records.json, https://api.openalex.org/works/W4311415873.",
+      "verified_at": "2026-09-24",
+      "cited_by_count_unreliable": true
+    },
+    "W2384495648": {
+      "note": "Upstream merge: 10.4230/lipics.ecoop.2020.15 is a small Dagstuhl paper whose title and abstract are genuine for that DOI, but the record carries 1,685 citations. Theano (arXiv 1605.02688; author 'The Theano Development Team'). Source: benchmark/suspect-citation-records.json, https://api.openalex.org/works/W2384495648.",
+      "verified_at": "2026-09-24",
+      "cited_by_count_unreliable": true
+    },
+    "W4322614756": {
+      "note": "Upstream merge: 10.4230/lipics.giscience.2025.9 is a small Dagstuhl paper whose title and abstract are genuine for that DOI, but the record carries 1,614 citations. counts_by_year from 2017 predate the 2025 paper. Source: benchmark/suspect-citation-records.json, https://api.openalex.org/works/W4322614756.",
+      "verified_at": "2026-09-24",
+      "cited_by_count_unreliable": true
+    },
+    "W2462906003": {
+      "note": "Upstream merge: 10.4230/lipics.concur.2020.3 is a small Dagstuhl paper whose title and abstract are genuine for that DOI, but the record carries 1,414 citations. Concrete Problems in AI Safety (arXiv 1606.06565; authors Amodei, Olah, Steinhardt). Source: benchmark/suspect-citation-records.json, https://api.openalex.org/works/W2462906003.",
+      "verified_at": "2026-09-24",
+      "cited_by_count_unreliable": true
+    },
+    "W2951534261": {
+      "note": "Upstream merge: 10.4230/lipics.giscience.2025.5 is a small Dagstuhl paper whose title and abstract are genuine for that DOI, but the record carries 1,292 citations. MS MARCO (arXiv 1611.09268; authors Bajaj, Campos, Craswell). Source: benchmark/suspect-citation-records.json, https://api.openalex.org/works/W2951534261.",
+      "verified_at": "2026-09-24",
+      "cited_by_count_unreliable": true
+    },
+    "W2951939904": {
+      "note": "Upstream merge: 10.4230/lipics.wabi.2019.10 is a small Dagstuhl paper whose title and abstract are genuine for that DOI, but the record carries 1,269 citations. record created 2025-10-10; counts_by_year from 2017 predate the 2019 paper. Source: benchmark/suspect-citation-records.json, https://api.openalex.org/works/W2951939904.",
+      "verified_at": "2026-09-24",
+      "cited_by_count_unreliable": true
+    },
+    "W1844512392": {
+      "note": "Upstream merge: 10.4230/lipics.opodis.2022.9 is a small Dagstuhl paper whose title and abstract are genuine for that DOI, but the record carries 1,210 citations. IPFS (arXiv 1407.3561; author Juan Benet in the index snapshot). Source: benchmark/suspect-citation-records.json, https://api.openalex.org/works/W1844512392.",
+      "verified_at": "2026-09-24",
+      "cited_by_count_unreliable": true
+    },
+    "W4300424419": {
+      "note": "Upstream merge: 10.4230/lipics.giscience.2025.18 is a small Dagstuhl paper whose title and abstract are genuine for that DOI, but the record carries 1,019 citations. counts_by_year from 2017 predate the 2025 paper. Source: benchmark/suspect-citation-records.json, https://api.openalex.org/works/W4300424419.",
+      "verified_at": "2026-09-24",
+      "cited_by_count_unreliable": true
+    }
+  }
+}

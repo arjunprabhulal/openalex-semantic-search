@@ -1,0 +1,34 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+dist/
+build/
+*.egg-info/
+generations/
+reports/
+.DS_Store
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Build outputs and data (never commit indexes, artifacts or model caches)
+artifacts/
+indexes/
+checkpoints/
+cache/
+*.npy
+*.faiss
+*.index
+.coverage
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# Editor settings
+.vscode/
+.idea/
